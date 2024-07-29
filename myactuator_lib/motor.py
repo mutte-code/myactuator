@@ -123,7 +123,7 @@ class Motor():
 	def Absolute_position_closed_loop_control_command(self, speed_limit, position_control) -> can.Message:
 		can_parameters = []
 		can_parameters.append(CanDataParameter(speed_limit,(0,32767),2,2))
-		can_parameters.append(CanDataParameter(position_control,(0,32767),4,4))
+		can_parameters.append(CanDataParameter(position_control,(0,36000),4,4))
 		can_data_constructor = CanData(0xA4,can_parameters)
 		return self._create_can_message(can_data_constructor)
 
