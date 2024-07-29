@@ -1,4 +1,5 @@
 import numpy as np
+from typing import List
 
 class CanDataParameter:
     def __init__(self, decimal_value, allowable_range, start_position, num_bytes):
@@ -22,7 +23,7 @@ class CanDataParameter:
         return int_list
 
 class CanData:
-    def __init__(self, initial_byte, parameter_list: list[CanDataParameter]):
+    def __init__(self, initial_byte, parameter_list: List[CanDataParameter]):
         self.initial_byte = initial_byte
         self.parameter_list = parameter_list
         self.byte_array = self._construct_byte_array()
