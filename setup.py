@@ -5,7 +5,7 @@ setup(
     version="2.0.0",
     packages=find_packages(),
     install_requires=[
-        'python-can','numpy'
+        'numpy'
     ],
     author="Nathan Adkins",
     author_email="npa00003@mix.wvu.edu",
