@@ -1,4 +1,4 @@
-import can
+from message import Message
 from myactuator_lib.can_data import CanDataParameter, CanData
 
 class _Motor():
@@ -23,7 +23,7 @@ class _Motor():
 			if not (0x00 <= byte <= 0xFF): # int not guaranteed to be within range of hex byte, check
 				raise ValueError
 
-		return can.Message(
+		return Message(
 			arbitration_id = self.arbitration_id,
 			is_extended_id = False,
 			data = can_data)
